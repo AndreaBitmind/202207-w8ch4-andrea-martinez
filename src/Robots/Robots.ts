@@ -1,13 +1,13 @@
 import "../loadEnvironment";
 import Debug from "debug";
-import { IRobot } from "../interfaces/interfaces";
+import { IRobot, RobotType } from "../interfaces/interfaces";
 
 const debug = Debug("robots-factory:src:Robots:Robots");
 
 class Robot implements IRobot {
   name: string;
 
-  type: string;
+  type: RobotType;
 
   battery: number;
 
@@ -15,7 +15,7 @@ class Robot implements IRobot {
 
   randomName: () => {};
 
-  constructor(nameRobot: string, typeRobot: string) {
+  constructor(nameRobot: string, typeRobot: RobotType) {
     this.name = nameRobot;
     this.type = typeRobot;
   }
